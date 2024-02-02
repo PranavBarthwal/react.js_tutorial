@@ -8,7 +8,6 @@
 - npm run dev (to open the project)
 
 
-
 ## DEPENDENCIES IN REACT
 - When your project needs code from other projects in order to do its thing, those other projects are “dependencies”; your project depends on them to run. When you install third-party packages via npm install , you're adding a dependency. Your project's package. json file includes a list of your project's dependencies.
 
