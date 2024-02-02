@@ -141,7 +141,9 @@ These files collectively provide the structure and configuration for your Vite R
 <br>
 
 ## GOOD PRACTICE
-Functions, components & files name should start with capital letter
+- Functions, components & files name should start with capital letter in both React Project aur React Project using Vite.
+- In basic React App if any HTML is returned from a file then it is named <code>.jsx</code> and if HTML return nhi ho rha hai to it is named <code>.js</code>
+- Vite wale project mein it forces us to name every file with <code>.jsx</code>
 
 <br>
 
