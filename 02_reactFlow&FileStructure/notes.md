@@ -7,10 +7,12 @@
 - npm install / npm i (To install required packages or To add node modules folder in our project)
 - npm run dev (to open the project)
 
+<br>
 
 ## DEPENDENCIES IN REACT
 - When your project needs code from other projects in order to do its thing, those other projects are “dependencies”; your project depends on them to run. When you install third-party packages via npm install , you're adding a dependency. Your project's package. json file includes a list of your project's dependencies.
 
+<br>
 
 ## FILE AND FOLDER STRUCTURE IN REACT
 
@@ -33,6 +35,7 @@
 
 </code>
 
+<br>
 
 ## Here's what each file and directory does:
 
@@ -135,6 +138,12 @@ Sure, let's go through the function of each file in your Vite React app:
 
 These files collectively provide the structure and configuration for your Vite React application, allowing you to organize your code, manage dependencies, and control the build process.
 
+<br>
+
+## GOOD PRACTICE
+Functions, components & files name should start with capital letter
+
+<br>
 
 ## React Virtual DOM
 
