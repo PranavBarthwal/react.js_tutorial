@@ -1,4 +1,4 @@
-# JSX : JavaScript XML
+# JSX : JavaScript Xtensible Markup Language
 JSX (JavaScript XML) is a syntax extension for JavaScript, often used with React to describe what the UI should look like. It looks similar to XML/HTML but is written within JavaScript code. JSX makes it easier to write and understand React components.
 
 Here's a simple example of JSX in a React component:
