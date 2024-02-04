@@ -1,4 +1,4 @@
-# useState() Hook and Batching
+# useState() Hook and Batching in React
 
 The `useState` hook in React is used to add state to functional components. Batching refers to the concept of combining multiple state updates into a single render cycle, which can improve performance. React automatically batches state updates that occur within the same event handler, lifecycle method, or asynchronous callback.
 
