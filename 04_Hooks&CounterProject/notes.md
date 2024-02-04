@@ -1,3 +1,17 @@
+# useState() Hook
+
+In React, the `useState` hook is used to add state to functional components. The syntax is as follows:
+
+```jsx
+const [stateVariable, setStateFunction] = useState(initialValue);
+```
+
+- `stateVariable`: This is the variable that holds the current state.
+- `setStateFunction`: This is a function used to update the state.
+- `initialValue`: This is the initial value of the state variable.
+
+<br>
+
 # Need of React Hooks
 
 React Hooks were introduced to address several issues and provide a more effective way of handling stateful logic and side effects in functional components. Here are some key needs that React Hooks address:
