@@ -170,3 +170,23 @@ function MyComponent() {
 ```
 
 In this example, `inputRef` is a ref object initialized with `useRef(null)`. We then use this ref to directly access the input element's `focus` method when the "Focus Input" button is clicked. This allows us to focus the input without having to manage its state in the component.
+
+---
+
+<br><br>
+
+# Let's break down each line of the below code
+
+```javascript
+const copyPass = useCallback(()=>{
+    passwordRef.current?.select();
+    passwordRef.current?.setSelectionRange(0, 25)
+    window.navigator.clipboard.writeText(password)
+  }, [password])
+```  
+
+1. `passwordRef.current?.select();`: This line selects the text inside an input field referenced by `passwordRef`. The `current` property of `passwordRef` is used to access the underlying DOM element. The `?.` syntax is the optional chaining operator, which allows you to access properties of an object that may be null or undefined without causing an error. So if `passwordRef.current` is null or undefined, this line will not throw an error, and the `select()` method will not be called.
+
+2. `passwordRef.current?.setSelectionRange(0, 25)`: Similar to the first line, this line sets the selection range of the text inside the input field referenced by `passwordRef`. The `setSelectionRange()` method is used to specify the start and end positions of the text selection. Again, the optional chaining operator (`?.`) is used to ensure that `setSelectionRange()` is only called if `passwordRef.current` is not null or undefined.
+
+3. `window.navigator.clipboard.writeText(password)`: This line writes the value of `password` to the system clipboard using the Clipboard API. `password` is assumed to be a string variable containing the password. `window.navigator.clipboard` is an object representing the system clipboard, and `writeText()` is a method that allows you to write text to the clipboard asynchronously. This operation might prompt the user for permission, depending on the browser's security settings.

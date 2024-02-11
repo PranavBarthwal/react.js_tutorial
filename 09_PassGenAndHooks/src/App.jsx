@@ -28,7 +28,16 @@ function App() {
 
   }, [length, numberAllowed, charAllowed])
 
-  useEffect(()=>{
+  const passwordRef = useRef(null)     // useRef Hook : read notes.md
+
+  // use notes.md to know whats happening in these lines
+  const copyPass = useCallback(()=>{
+    passwordRef.current?.select();
+    passwordRef.current?.setSelectionRange(0, 25)
+    window.navigator.clipboard.writeText(password)
+  }, [password])
+
+  useEffect(()=>{          // useEffect Hook : Read notes.md
      passwordGenerator() 
     }, [length, numberAllowed, charAllowed, passwordGenerator])
 
@@ -40,8 +49,8 @@ function App() {
       <h1 className='text-white text-center my-3'>Password generator</h1>
       
       <div className="flex shadow rounded-lg overflow-hidden mb-4">
-      <input type="text" value={password} placeholder="Password" readOnly className="outline-none w-full py-1 px-3"/>
-        <button className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>copy</button>
+      <input type="text" value={password} placeholder="Password" ref={passwordRef} readOnly className="outline-none w-full py-1 px-3"/>
+        <button onClick={copyPass} className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>copy</button>
       </div>
 
       <div className='flex text-sm gap-x-2'>
