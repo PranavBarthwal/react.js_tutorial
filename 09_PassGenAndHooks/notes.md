@@ -61,6 +61,8 @@ In this example, `handleClick` is wrapped with `useCallback`. It depends on the 
 
 The `useEffect` hook in React is used to perform side effects in functional components. Side effects might include things like data fetching, subscriptions, or manually changing the DOM in ways that can affect other parts of your application.
 
+`The effect will only re-run if one of the dependencies has changed since the last render. If no dependencies are provided, the effect will run after every render`
+
 The basic syntax of `useEffect` is as follows:
 
 ```jsx
@@ -172,6 +174,61 @@ function MyComponent() {
 In this example, `inputRef` is a ref object initialized with `useRef(null)`. We then use this ref to directly access the input element's `focus` method when the "Focus Input" button is clicked. This allows us to focus the input without having to manage its state in the component.
 
 ---
+
+<br><br>
+
+# Memoization in React
+
+Memoization in React refers to the technique of caching the results of expensive function calls and reusing them when the inputs to the function are the same. This can help optimize performance by preventing unnecessary re-renders or re-calculations.
+
+In React, memoization can be achieved using several techniques:
+
+1. **React.memo**: This is a higher-order component provided by React that can be used to memoize functional components. It performs a shallow comparison of props and re-renders the component only if the props have changed.
+
+   ```jsx
+   import React from 'react';
+
+   const MyComponent = React.memo(function MyComponent(props) {
+     /* component logic */
+   });
+
+   export default MyComponent;
+   ```
+
+2. **useMemo Hook**: This hook allows you to memoize the result of a function or computation and recompute it only if one of the dependencies has changed.
+
+   ```jsx
+   import React, { useMemo } from 'react';
+
+   function MyComponent({ data }) {
+     const processedData = useMemo(() => {
+       /* expensive computation based on data */
+       return processData(data);
+     }, [data]); // recompute if data changes
+
+     return <div>{processedData}</div>;
+   }
+
+   export default MyComponent;
+   ```
+
+3. **useCallback Hook**: This hook is used to memoize functions so that they are not recreated on every render unless the dependencies have changed.
+
+   ```jsx
+   import React, { useCallback } from 'react';
+
+   function MyComponent({ onClick }) {
+     const handleClick = useCallback(() => {
+       /* handle click logic */
+     }, []); // no dependencies
+
+     return <button onClick={handleClick}>Click me</button>;
+   }
+
+   export default MyComponent;
+   ```
+
+These techniques can help improve the performance of React applications by reducing unnecessary re-renders and re-calculations. However, it's essential to use them judiciously and only when necessary, as overusing memoization can lead to unnecessary complexity and potential bugs.
 
 <br><br>
 
