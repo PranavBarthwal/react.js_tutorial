@@ -1,5 +1,5 @@
 import React from 'react'
-import {link, NavLink} from 'react-router-dom'          // we use link instead of <a> tag in react as anchor tag reloads the whole page, which is not desirable in react
+import {Link, NavLink} from 'react-router-dom'          // we use link instead of <a> tag in react as anchor tag reloads the whole page, which is not desirable in react
 
 export default function Header() {
     return (
