@@ -13,7 +13,7 @@ const UserContextProvider = ({children}) => {
   }
 
  export default UserContextProvider; 
-
+ 
 
 
 //  This code defines a React component named `UserContextProvider` that's used to provide a context for user data to its child components. It's written in JavaScript and uses JSX syntax, which is a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript code.
