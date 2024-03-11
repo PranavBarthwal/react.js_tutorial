@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import UserContext from '../context/userContext';
 
 function Login() => {
@@ -21,7 +21,7 @@ function Login() => {
             />
 
             <input type='text' 
-            placeholder='username' 
+            placeholder='password' 
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             />
