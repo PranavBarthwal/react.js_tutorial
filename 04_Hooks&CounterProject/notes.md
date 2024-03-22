@@ -12,6 +12,28 @@ const [stateVariable, setStateFunction] = useState(initialValue);
 
 <br>
 
+# Hooks in React
+
+In React, hooks are functions that let you use state and other React features in function components, which are components that are written as JavaScript functions rather than ES6 classes. Hooks were introduced in React version 16.8.0 and provide a way to use state and other React features without writing a class.
+
+Some of the most commonly used hooks are:
+
+1. **useState**: This hook allows function components to add state variables. It returns a stateful value and a function to update it. This hook replaces the `this.state` and `this.setState()` methods used in class components.
+
+2. **useEffect**: This hook allows function components to perform side effects in function components. It's similar to lifecycle methods such as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` in class components. `useEffect` takes a function as its first argument, which will be executed after rendering, and optionally a dependency array as its second argument to control when the effect runs.
+
+3. **useContext**: This hook allows function components to consume context created by a `React.createContext()` provider component. It enables components to access values stored in the context without having to pass props down through every level of the component tree.
+
+4. **useReducer**: This hook is an alternative to `useState` for managing more complex state logic. It's similar to the `useState` hook but accepts a reducer function and an initial state. It returns the current state and a dispatch function to update the state based on actions.
+
+5. **useCallback** and **useMemo**: These hooks are used for performance optimization. `useCallback` memoizes a callback function so that it's only re-created if its dependencies change, while `useMemo` memoizes a value so that it's only recomputed when its dependencies change.
+
+6. **useRef**: This hook returns a mutable ref object whose `current` property is initialized to the passed argument. The returned object persists for the full lifetime of the component.
+
+Hooks provide a more concise and readable way to manage state and side effects in React components, especially for functional components. They encourage the reuse of logic and make it easier to separate concerns within your components.
+
+<br>
+
 # Need of React Hooks
 
 React Hooks were introduced to address several issues and provide a more effective way of handling stateful logic and side effects in functional components. Here are some key needs that React Hooks address:
