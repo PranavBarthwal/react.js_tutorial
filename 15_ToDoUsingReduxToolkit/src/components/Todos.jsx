@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import {removeTodo} from '../features/todo/todoSlice'
 
 function Todos() {
-    const todos = useSelector(state => state.todos)
+    const todos = useSelector((state) => state.todos)
     const dispatch = useDispatch()
 
   return (
@@ -43,3 +43,17 @@ function Todos() {
 }
 
 export default Todos
+
+
+
+// What is happening in the code snippet?
+
+// The Redux Toolkit is being used in this code to manage the state of the application, specifically the state of the todo list.
+
+// The `useSelector` hook is imported from the `react-redux` library. This hook allows you to extract data from the Redux store state. In this case, it's being used to access the `todos` state from the Redux store.
+
+// The `useDispatch` hook is also imported from the `react-redux` library. This hook returns a reference to the dispatch function from the Redux store. You use it to dispatch actions.
+
+// In the `onClick` handler of the button, `dispatch(removeTodo(todo.id))` is called. This dispatches an action to the Redux store. The `removeTodo` action is presumably defined in the `todoSlice` file and it takes the id of the current todo as a parameter. This action will likely update the state of the todo list in the Redux store by removing the todo with the given id.
+
+// The `todos` state is then mapped over to render a list of todo items. Each todo item has a button that, when clicked, dispatches the `removeTodo` action with the id of that todo.

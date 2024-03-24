@@ -36,3 +36,16 @@ function AddTodo() {
     }
 
 export default AddTodo
+
+
+// What is happening in the code snippet?
+
+// The Redux Toolkit is being used in this code to manage the state of the application.
+
+// The useDispatch hook is imported from the react-redux library. This hook returns a reference to the dispatch function from the Redux store. You use it to dispatch actions.
+
+// In the addTodoHandler function, e.preventDefault() is called to prevent the page from refreshing when the form is submitted.
+
+// Then, dispatch(addTodo(input)) is called. This dispatches an action to the Redux store. The addTodo action is presumably defined elsewhere in the code and it takes the current value of input as a parameter. This action will likely update the state of the todo list in the Redux store.
+
+// Finally, setInput('') is called to clear the input field after the todo item is added.
