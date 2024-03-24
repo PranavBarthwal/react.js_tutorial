@@ -93,3 +93,10 @@ In Redux Toolkit, actions are typically created using action creator functions. 
 Redux Toolkit provides utilities like `createSlice` and `createAction` to automatically generate action creators, which helps to reduce boilerplate code and ensures consistency in action creation across your application.
 
 By using reducers and actions in Redux Toolkit, you can effectively manage the state of your Redux application and handle state updates in a more structured and efficient manner, leading to cleaner code and improved developer productivity.
+
+
+
+# useDispatch() in Rtk
+
+
+In Redux Toolkit (RTK), the useDispatch hook is a hook provided by the React-Redux library for dispatching actions to the Redux store within React components. It allows you to access the dispatch function without explicitly connecting your component to the Redux store.

@@ -1,3 +1,5 @@
+// This is a store :  it is the single store of truth. every app has only one store.
+
 import { configureStore } from '@reduxjs/toolkit';
 
 import todoReducer from '../features/todo/todoSlice';
