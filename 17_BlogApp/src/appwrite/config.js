@@ -140,3 +140,34 @@ export class Service{
 const service = new Service();
 
 export default service
+
+
+
+
+// Explanation
+
+// This JavaScript code defines a class Service that interacts with the Appwrite backend for various operations like creating, updating, deleting, and retrieving posts, as well as uploading, deleting, and previewing files.
+
+// The Service class has three properties: client, databases, and bucket. client is an instance of the Client class from the Appwrite SDK. databases and bucket are instances of the Databases and Storage classes from the Appwrite SDK, respectively. These instances are initialized in the constructor of the Service class.
+
+// The client instance is configured with the endpoint and project ID of the Appwrite backend, which are imported from a configuration file. The databases and bucket instances are initialized with the configured client instance.
+
+// The Service class has several methods for interacting with the Appwrite backend:
+
+// createPost: This method creates a new post in the Appwrite database. It takes an object with properties title, slug, content, featuredImage, status, and userId as an argument.
+
+// updatePost: This method updates an existing post in the Appwrite database. It takes a slug and an object with properties title, content, featuredImage, and status as arguments.
+
+// deletePost: This method deletes a post from the Appwrite database. It takes a slug as an argument.
+
+// getPost: This method retrieves a post from the Appwrite database. It takes a slug as an argument.
+
+// getPosts: This method retrieves a list of posts from the Appwrite database. It takes an array of queries as an argument, with a default value of querying for posts with a status of "active".
+
+// uploadFile: This method uploads a file to the Appwrite storage. It takes a file as an argument.
+
+// deleteFile: This method deletes a file from the Appwrite storage. It takes a fileId as an argument.
+
+// getFilePreview: This method retrieves a preview of a file from the Appwrite storage. It takes a fileID as an argument.
+
+// At the end of the file, an instance of the Service class is created and exported as the default export. This instance can be imported and used in other parts of the application to interact with the Appwrite backend.
