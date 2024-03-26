@@ -97,7 +97,6 @@ export class Service{
         }
     }
 
-
     // File upload service
     async uploadFile(file){
         try {
@@ -113,7 +112,29 @@ export class Service{
         }
     }
 
-    
+    // File delete service
+    async deleteFile(fileId){
+        try {
+            await this.bucket.deleteFile(
+                conf.appwriteBucketId,
+                fileId
+            );
+            return true;
+        } catch (error) {
+            console.error("Error deleting file:", error);
+            throw error;
+            return false;
+        }
+    }
+
+    // File preview service
+    getFilePreview(fileID){
+        return this.bucket.getFilePreview(
+            conf.appwriteBucketId,
+            FileId
+        )
+    }
+
 }
 
 const service = new Service();
